@@ -1,9 +1,32 @@
 import React from 'react';
 import './Navbra.css';
+import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
-import imglogo_black from './png-transparent-food-icon-delivery-icon-sushi-pizza-delivery-scooter-courier-food-delivery-text-thumbnail-removebg-preview.png';
+// import imglogo_black from './png-transparent-food-icon-delivery-icon-sushi-pizza-delivery-scooter-courier-food-delivery-text-thumbnail-removebg-preview.png';
 import { IoRestaurant } from "react-icons/io5";
 function Navbar() {
+
+
+  const userData = JSON.parse(localStorage.getItem("user"));
+
+  const navigate = useNavigate();
+
+    const home = () => {
+        navigate('/');
+    };
+
+    const handleLoginClick = () => {
+      navigate('/register');
+  };
+
+    const handleClick = () => {
+      navigate('/login');
+  };
+  const myprofile = () => {
+    navigate('/myprofile');
+};
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{height: "80px"}}>
       <div className="container-fluid">
@@ -18,14 +41,14 @@ function Navbar() {
 
              
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle logogo" onClick={home} href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <IoRestaurant className='logoo' />
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">My Profile</a></li>
-                <li><a className="dropdown-item" href="#">Home</a></li>
-                <li><a className="dropdown-item" href="#">New User</a></li>
-                <li><a className="dropdown-item" href="#">Log Out</a></li>
+                <li><a className="dropdown-item" onClick={myprofile}  href="#">{userData.name}</a></li>
+                {/* <li><a className="dropdown-item" href="#">Home</a></li> */}
+                <li><a className="dropdown-item" onClick={handleLoginClick}  href="#">New User</a></li>
+                <li><a className="dropdown-item" onClick={handleClick} href="#">Log Out</a></li>
                 
               </ul>
             </li>
