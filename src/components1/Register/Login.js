@@ -7,6 +7,13 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const divStyle = {
+        color: 'blue',
+        fontSize: '45px',
+        fontWeight: 'bold',
+        
+      };
+
     const handleRegisterClick = () => {
         navigate('/register');
     };
@@ -31,7 +38,7 @@ const Login = () => {
         <>
             {/* <Navbar /> */}
             <div className="border w-25 mt-5 m-auto p-3">
-                <h1 className="text-primary text-center">Login Page</h1>
+                <h4 className="text-secondary text-center"><span style={divStyle}>Hungry Hub</span> Login Page</h4>
                 <div className="mt-3">
                     <label>Email:</label>
                     <input

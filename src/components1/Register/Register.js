@@ -14,6 +14,13 @@ function Register() {
         password: ''
     });
 
+    const divStyle = {
+        color: 'Orange',
+        fontSize: '45px',
+        fontWeight: 'bold',
+        
+      };
+
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -53,7 +60,7 @@ function Register() {
     return (
         <div>
             <div className="border w-25 mt-5 m-auto p-3">
-                <h1 className="text-secondary text-center">Register Page</h1>
+                <h4 className="text-secondary text-center"><span style={divStyle}>Hungry Hub</span> Register Page</h4>
                 <div className="mt-3">
                     <label>Name:</label>
                     <input

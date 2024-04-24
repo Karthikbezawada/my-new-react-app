@@ -3,6 +3,10 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Navbar from '../Navbar/Navbar';
 import Foot from '../Navbar/Footer';
+import Props from './Props';
+
+import Data from './Data'
+
 
 function Home() {
 
@@ -44,9 +48,31 @@ function Home() {
         <div><img src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029851/PC_Creative%20refresh/3D_bau/banners_new/Ice_Creams.png'/></div>
 
     </Carousel>
-      <Foot/>
+    
+        <h1 className='text-secondary m-3'>Trending</h1>
+        
+        <div className='container my-5'>
+        <div className='row'>
+          {Data.map((values, index) => (
+            <div className='col-md-4 mb-3' key={index}>
+              <Props
+                imgsrc={values.imgsrc}
+                h={values.h}
+                rate={values.rate}
+                link={values.link}
+                btn={values.btn}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+            
+      
+        <Foot/>
     </div>
   )
 }
+
 
 export default Home;
