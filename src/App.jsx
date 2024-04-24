@@ -6,6 +6,14 @@ import Home from './components1/Home/home.jsx';
 import Login from './components1/Register/Login.js';
 import Register from './components1/Register/Register.js';
 import MyProfile from './components1/Register/Myprofile.js';
+import Biriyani from './components1/Home/Biriyani.js';
+import Northindian from './components1/Home/Northindian.js';
+import Chines from './components1/Home/Chines.js';
+import Southindian from './components1/Home/Southindian.js';
+import Order from './components1/Home/Order.js';
+import Myaddress from './components1/Home/Myaddress.js';
+
+
 
 
 const App = () => {
@@ -19,15 +27,14 @@ const App = () => {
                     {/* <Route path="/about" element={<About/>} /> */}
                     {/* <Route path='/service' element={<div>404 NOT FOUND</div>}/> */}
                     <Route path='/login'  element={<Login/>}/>
-                    {/* <Route path="/donateus" element={<Contact/>}/> */}
                     <Route path='/register' element={<Register/>} />
-                    {/* <Route path='/home' element={<Ho/>} />
-                    <Route path='/newlaunch' element={<NL/>} />
-                    <Route path='/products' element={<Products/>}/>
-                    <Route path='/contactus' element={<ContactUs/>}/>
-                    <Route path='/service' element={<Serv/>}/> */}
                     <Route path='/myprofile' element={<MyProfile/>}/>
-                    
+                    <Route path='/biriyani' element={<Biriyani/>}/>
+                    <Route path='/northindian' element={<Northindian/>}/>
+                    <Route path='/chines' element={<Chines/>}/>
+                    <Route path='/southindia' element={<Southindian/>}/>
+                    <Route path='/order' element={<Order/>}/>
+                    <Route path='/myaddress' element={<Myaddress/>}/>
                     
                     
                 </Routes>

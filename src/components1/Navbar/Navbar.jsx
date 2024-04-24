@@ -33,6 +33,9 @@ function Navbar() {
   const myProfile = () => {
     navigate('/myprofile');
   };
+  const myaddress = () => {
+    navigate('/myaddress');
+  };
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ height: "80px" }}>
@@ -48,6 +51,8 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li><a className="dropdown-item" onClick={myProfile} href="#">{userData ? userData.name : 'My Profile'}</a></li>
+                <li><a className="dropdown-item" onClick={myaddress} href="#">Address</a></li>
+
                 <li><a className="dropdown-item" onClick={handleLoginClick} href="#">New User</a></li>
                 <li><a className="dropdown-item" onClick={handleClick} href="#">Log Out</a></li>
                 <li><a className="dropdown-item" href="#">Hungry Hub Gold<FaCrown  style={divStyle}/></a></li>
